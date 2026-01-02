@@ -5,6 +5,8 @@ metadata:
   namespace: gitea
   annotations:
     traefik.ingress.kubernetes.io/router.middlewares: traefik-redirect-https@kubernetescrd
+    traefik.ingress.kubernetes.io/forwarded-headers: "true"
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
     cert-manager.io/cluster-issuer: letsencrypt-dns-aws
 spec:
   ingressClassName: traefik
