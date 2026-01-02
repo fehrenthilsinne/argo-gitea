@@ -3,8 +3,15 @@ kind: Ingress
 metadata:
   name: gitea
   namespace: gitea
+  annotations:
+    traefik.ingress.kubernetes.io/router.middlewares: traefik-redirect-https@kubernetescrd
+    cert-manager.io/cluster-issuer: letsencrypt-dns-aws
 spec:
   ingressClassName: traefik
+  tls:
+    - hosts:
+        - argocd.bleservoisier.fr
+      secretName: gitea-tls
   rules:
     - host: gitea.bleservoisier.fr
       http:
