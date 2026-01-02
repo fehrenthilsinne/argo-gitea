@@ -12,7 +12,7 @@ spec:
   ingressClassName: traefik
   tls:
     - hosts:
-        - argocd.bleservoisier.fr
+        - gitea.bleservoisier.fr
       secretName: gitea-tls
   rules:
     - host: gitea.bleservoisier.fr
