@@ -21,7 +21,7 @@ spec:
         - containerPort: 22
         volumeMounts:
         - name: data
-          mountPath: /var/lib/gitea
+          mountPath: /data
       volumes:
       - name: data
         persistentVolumeClaim:
