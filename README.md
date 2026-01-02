@@ -1,2 +1,0 @@
-# argo-gitea
-argo-gitea
