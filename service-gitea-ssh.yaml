@@ -1,16 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gitea
+  name: gitea-ssh
   namespace: gitea
 spec:
-  type: ClusterIP
+  type: LoadBalancer
+  loadBalancerIP: 192.168.1.201
   selector:
     app: gitea
   ports:
-    - name: http
-      port: 80
-      targetPort: 3000
-    - name: ssh
-      port: 22
+    - port: 22
       targetPort: 22
+      protocol: TCP
