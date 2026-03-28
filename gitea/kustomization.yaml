@@ -12,9 +12,9 @@ resources:
   - service-gitea-ssh.yaml
   - service-gitea-web.yaml
   - service-mysql.yaml
-  
 images:
   - name: gitea/gitea
-    newTag: 1.25.4
+    newTag: 1.25.5
+    newName: gitea/gitea
   - name: mysql
     newTag: 9.6.0
