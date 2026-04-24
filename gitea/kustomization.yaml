@@ -14,7 +14,8 @@ resources:
   - service-mysql.yaml
 images:
   - name: gitea/gitea
-    newTag: 1.25.5
+    newTag: 1.26.0
     newName: gitea/gitea
   - name: mysql
-    newTag: 9.6.0
+    newTag: 9.7.0
+    newName: mysql
