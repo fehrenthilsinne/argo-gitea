@@ -17,5 +17,5 @@ images:
     newTag: 28.2.0
     newName: gitea/gitea
   - name: mysql
-    newTag: 9.7.2
+    newTag: 9.7.4
     newName: mysql
